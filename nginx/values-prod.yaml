@@ -1,0 +1,17 @@
+# values-prod.yaml
+
+replicaCount: 3
+image:
+  repository: nginx
+  tag: "1.16.0"
+service:
+  type: LoadBalancer
+  port: 80
+resources:
+  limits:
+    cpu: 1000m
+    memory: 2Gi
+  requests:
+    cpu: 500m
+    memory: 1Gi
+environment: prod
